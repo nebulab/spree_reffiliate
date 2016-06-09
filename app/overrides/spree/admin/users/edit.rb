@@ -4,7 +4,7 @@ Deface::Override.new(
   :insert_after => "[data-hook='admin_user_api_key']"
 ) do
 <<-CODE.chomp
-<fieldset data-hook="admin_user_referral_table">
+<fieldset data-hook="admin_user_referral_table" class="alpha twelve columns">
   <legend>Referral Information</legend>
   <table>
     <tr>
