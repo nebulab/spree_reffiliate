@@ -7,4 +7,19 @@ en:
       affiliated_promotion_rule:
         name: "Affiliate User"
         description: "Must be an affiliated user"
-    editing_affiliate: "Editing Affiliate:" 
+        choose_affiliates: Choose Affiliates
+    reffiliate:
+      affiliates: Affiliates
+      back_to_affiliates_list: Back To Affiliates List
+      editing_affiliate: "Editing Affiliate:"
+      layout: Layout
+      new_affiliate: New Affiliate
+      name: Name
+      partial: Partial
+      path: Path
+      statistics: Statistics
+      affiliate:
+        name: Name
+        path: Path
+        count: Count
+        status: Status

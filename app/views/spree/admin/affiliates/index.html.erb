@@ -4,7 +4,7 @@
 
 <% content_for :page_actions do %>
   <li>
-    <%= button_link_to Spree.t(:new_affiliate), new_admin_affiliate_url, :icon => 'plus', :id => 'admin_new_affiliate_link' %>
+    <%= button_link_to Spree.t('reffiliate.new_affiliate'), new_admin_affiliate_url, :icon => 'plus', :id => 'admin_new_affiliate_link' %>
   </li>
 <% end %>
 <% if @affiliates.any? %>
@@ -19,10 +19,10 @@
     </colgroup>
     <thead>
       <tr data-hook="admin_affiliates_index_headers">
-        <th><%= Spree.t('affiliate.name') %></th>
-        <th><%= Spree.t('affiliate.path') %></th>
-        <th><%= Spree.t('affiliate.count') %></th>
-        <th><%= Spree.t('affiliate.status') %></th>
+        <th><%= Spree.t('reffiliate.affiliate.name') %></th>
+        <th><%= Spree.t('reffiliate.affiliate.path') %></th>
+        <th><%= Spree.t('reffiliate.affiliate.count') %></th>
+        <th><%= Spree.t('reffiliate.affiliate.status') %></th>
         <th data-hook="admin_affiliates_index_header_actions" class="actions"></th>
       </tr>
     </thead>

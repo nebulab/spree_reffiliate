@@ -1,10 +1,10 @@
 <% content_for :page_title do %>
-  <%= link_to "#{Spree.t(:editing_affiliate)} #{@affiliate.name}", edit_admin_affiliate_url(@affiliate) %>
+  <%= link_to "#{Spree.t('reffiliate.editing_affiliate')} #{@affiliate.name}", edit_admin_affiliate_url(@affiliate) %>
 <% end %>
 
 <% content_for :page_actions do %>
   <li>
-    <%= button_link_to Spree.t(:back_to_affiliates_list), spree.admin_affiliates_path, :icon => 'arrow-left' %>
+    <%= button_link_to Spree.t('reffiliate.back_to_affiliates_list'), spree.admin_affiliates_path, :icon => 'arrow-left' %>
   </li>
 <% end %>
 
@@ -26,7 +26,7 @@
   </div>
 </fieldset>
 <fieldset data-hook="admin_affiliate_edit_stats" class="alpha twelve columns">
-  <legend><%= Spree.t(:statistics) %></legend>
+  <legend><%= Spree.t('reffiliate.statistics') %></legend>
   <table>
     <tbody>
       <tr>
