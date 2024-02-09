@@ -1,14 +1,17 @@
 module Spree
-  Spree.user_class.class_eval do
-    has_one :referral
-    has_one :referred_record
-    has_one :affiliate, through: :referred_record, foreign_key: :affiliate_id
-    has_one :affiliate_record, class_name: 'Spree::ReferredRecord'
+  module UserDecorator
 
     attr_accessor :referral_code, :affiliate_code
 
-    after_create :create_referral
-    after_create :referral_affiliate_check
+    def self.prepended(base)
+      base.has_one :referral
+      base.has_one :referred_record
+      base.has_one :affiliate, through: :referred_record, foreign_key: :affiliate_id
+      base.has_one :affiliate_record, class_name: 'Spree::ReferredRecord'
+
+      base.after_create :create_referral
+      base.after_create :referral_affiliate_check
+    end
 
     def referred_by
       referred_record.try(:referral).try(:user)
@@ -37,5 +40,7 @@ module Spree
           referred.referred_records.create(user: self)
         end
       end
+
+    Spree::User.prepend self
   end
 end
